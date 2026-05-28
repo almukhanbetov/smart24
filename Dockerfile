@@ -16,6 +16,6 @@ WORKDIR /app
 COPY --from=builder /app/smart24-api .
 COPY migrations ./migrations
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["./smart24-api"]
