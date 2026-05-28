@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,8 +24,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/smart24-backend:latest
-            ${{ secrets.DOCKER_USERNAME }}/smart24-backend:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/smart24-backend:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/smart24-backend:${{ github.sha }}
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.2.0
