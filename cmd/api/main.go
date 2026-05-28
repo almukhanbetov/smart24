@@ -22,7 +22,7 @@ func main() {
 
 	port := os.Getenv("APP_PORT")
 	if port == "" {
-		port = "8080"
+		port = "8081"
 	}
 
 	log.Println("API started on :" + port)
